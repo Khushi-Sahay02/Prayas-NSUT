@@ -1,4 +1,68 @@
-// Teams Section
+//MAIN NAVBAR
+window.onscroll = function () {
+    myFunction();
+  };
+  const mainNavbar = document.querySelector(".main-navbar");
+  const logoSpan = document.querySelector(".lioSpan");
+  var navLinks = document.getElementsByClassName("navLinks");
+  
+  function myFunction() {
+    if (window.pageYOffset > 20) {
+      mainNavbar.classList.add("sticky");
+    } else {
+      mainNavbar.classList.remove("sticky");
+    }
+  }
+  
+  let home = document.querySelector(".home");
+  let navEvents = document.querySelector(".nav-events");
+  let navGallery = document.querySelector(".nav-gallery");
+  let navAboutUs = document.querySelector(".nav-about-us");
+  let navTeam = document.querySelector(".nav-teams");
+  let navContact = document.querySelector(".nav-contact");
+  
+  navTeam.addEventListener("click", function () {
+    removeActive();
+    navTeam.classList.add("active");
+  });
+  
+  navContact.addEventListener("click", function () {
+    removeActive();
+    navContact.classList.add("active");
+  });
+  
+  home.addEventListener("click", function () {
+    removeActive();
+    home.classList.add("active");
+  });
+  
+  navAboutUs.addEventListener("click", function () {
+    removeActive();
+    navAboutUs.classList.add("active");
+  });
+  
+  navEvents.addEventListener("click", function () {
+    removeActive();
+    navEvents.classList.add("active");
+  });
+  
+  navGallery.addEventListener("click", function () {
+    removeActive();
+    navGallery.classList.add("active");
+  });
+  
+  function removeActive() {
+    navAboutUs.classList.remove("active");
+    home.classList.remove("active");
+    navEvents.classList.remove("active");
+    navGallery.classList.remove("active");
+    navTeam.classList.remove("active");
+    navContact.classList.remove("active");
+  }
+  
+
+
+// TEAMS SECTION
 //const presidentsLi = document.querySelector(".presidents-li");
 const advisorsLi = document.querySelector(".advisors-li");
 const coreTeamLi = document.querySelector(".core-team-li");
