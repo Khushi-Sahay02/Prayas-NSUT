@@ -676,6 +676,10 @@ body {
 .card-text {
   grid-area: text;
   margin: 25px;
+  overflow-y: scroll;
+}
+.card-text::-webkit-scrollbar {
+  display: none;
 }
 
 .card-text p {
