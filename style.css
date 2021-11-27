@@ -1283,4 +1283,5 @@ button {
 .fa:hover {
   background-color: #09568d;
   color: white;
+  text-decoration:none;
 }
